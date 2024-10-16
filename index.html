@@ -3,20 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>Currency Exchange</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Simple Website</h1>
-    </header>
-    <main>
-        <p>This is a simple website created with HTML, CSS, and JavaScript.</p>
-        <button id="alertButton">Click Me!</button>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Simple Website</p>
-    </footer>
+    <div class="container">
+        <h1>Currency Exchange</h1>
+        <button id="toggle-mode">Toggle Colorblind Mode</button>
+        <form id="exchange-form">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+            
+            <label for="from-currency">From:</label>
+            <select id="from-currency" required>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+            
+            <label for="to-currency">To:</label>
+            <select id="to-currency" required>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+            </select>
+            
+            <button type="submit">Convert</button>
+        </form>
+        <div id="result"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
